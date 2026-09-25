@@ -10,6 +10,7 @@ CREATE TABLE benutzer (
 );
 
 INSERT INTO benutzer (username, passwort, email) VALUES
+('admin', 'Admin123!', 'admin@example.local'),
 ('alice', 'sonne123', 'alice@example.local'),
 ('bob', 'geheim456', 'bob@example.local'),
 ('charlie', 'test789', 'charlie@example.local');
