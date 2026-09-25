@@ -1,3 +1,7 @@
+Wichtig: Dies dient nur als Anschauungsprojekt, was SQL - Injections sind und wie man sie (relativ) leicht verhindern kann.
+Unter keinen Umständen sollte PDO ohne Prepared Statements verwendet werden!
+
+
 1. Test
 Um z.B. alle Datensätze bei einer ungesicherten Datenbankverbindung auszulesen, kann man vesuchen folgendes einzugeben:
 ' OR '1'='1
